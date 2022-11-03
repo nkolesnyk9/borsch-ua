@@ -1,0 +1,35 @@
+.card{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid yellow;
+    
+}
+
+.card-body{
+    /* width: 250px; */
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 2px solid green;
+    gap: 15px;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid pink;
+
+}
+
+.price{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid orange;
+}
+
+.card-button{
+    background-color: blue;
+    color: white;
+}
