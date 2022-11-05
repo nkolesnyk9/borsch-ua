@@ -17,13 +17,15 @@
   }
   
   .modal {
-    width: 250px;
-    height: 170px;
+    width: 350px;
+    height: 380px;
     background: white;
     color: rgb(174, 20, 20);
     z-index: 10;
     border-radius: 16px;
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
+    /* border: 2px solid green; */
+    overflow: auto;
   }
   
   .modalHeader {
@@ -48,6 +50,8 @@
     font-size: 14px;
     color: #2c3e50;
     text-align: center;
+    /* border: 2px solid red;
+    overflow: auto; */
   }
   
   .modalActions {

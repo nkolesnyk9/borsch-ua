@@ -1,16 +1,21 @@
+// jam : price_1M0pCwJjFKHFVjIvKVRB3xzH
+
+// pin: price_1M0pGZJjFKHFVjIv9mwLonjd
+
+// flag: price_1M0pHCJjFKHFVjIvPcUevcQh
 const productsArray = [
 {
-    id:"1",
+    id:"price_1M0pCwJjFKHFVjIvKVRB3xzH",
     title: "Blackberry jam",
     price: 4.99
 },
 {
-    id:"2",
+    id:"price_1M0pGZJjFKHFVjIv9mwLonjd",
     title: "ukrainian pin",
     price: 14.99
 },
 {
-    id:"3",
+    id:"price_1M0pHCJjFKHFVjIvPcUevcQh",
     title: "Flag of Ukraine",
     price: 10.99
 },
