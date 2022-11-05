@@ -10,17 +10,17 @@ const Modal = ({setIsOpen}) => {
   const cart = useContext(CartContext)
 
   const checkout = async () => {
-    await fetch('http://localhost:4000/checkout', {
+    await fetch('http://localhost:3003/checkout', {
         method: "POST",
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({items: cart.items})
+        body: JSON.stringify({items: cart.items}) // we are passing items from our cart to our backend
     }).then((response) => {
         return response.json();
     }).then((response) => {
         if(response.url) {
-            window.location.assign(response.url); // Forwarding user to Stripe
+            window.location.assign(response.url); // this will forward users over to stripe paymetn 
         }
     });
 }
@@ -45,7 +45,6 @@ const Modal = ({setIsOpen}) => {
                 ))}
                   <h1>Total:{cart.getTotalCost().toFixed(2)}</h1>
                   <button className={styles.deleteBtn} onClick={checkout}>
-                  {/* <button className={styles.deleteBtn} onClick={() => setIsOpen(false)}> */}
                 Purchase items!
               </button>
               </>
