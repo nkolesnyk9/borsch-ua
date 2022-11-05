@@ -5,10 +5,12 @@ import About from './pages/About';
 import Store from './pages/Store';
 import Success from './pages/Success';
 import Cancel from './pages/Cancel';
+import CartProvider from './CartContext';
 
 function App() {
   return (
     <>
+    <CartProvider>
     <Navbar />
     <Routes>
       <Route index element={<Home />} />
@@ -19,6 +21,7 @@ function App() {
 
       
     </Routes>
+    </CartProvider>
     </>
   );
 }
