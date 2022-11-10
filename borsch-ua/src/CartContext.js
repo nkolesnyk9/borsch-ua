@@ -1,5 +1,12 @@
+import React, { Component } from "react";
+import Client from "shopify-buy"; //requried by shopify
 import { createContext, useState } from "react";
 import { productsArray, getProductData } from "./productsStore";
+
+// const client = Client.buildClient({
+//   domain: process.env.REACT_APP_SHOPIFY_DOMAIN,
+//   storefrontAccessToken: process.env.REACT_APP_SHOPIFY_API,
+// });
 
 export const CartContext = createContext({
   items: [],

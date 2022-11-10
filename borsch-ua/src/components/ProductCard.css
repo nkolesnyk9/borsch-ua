@@ -1,19 +1,28 @@
 .card{
-    width: 250px;
     display: flex;
-    flex-direction: column;
-    border: 2px solid yellow;
+    flex-direction: row;
+    gap: 15px;
+
+    
+
     
 }
 
+.card-image{
+    
+}
+
+.card-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .card-body{
     /* width: 250px; */
     height: 200px;
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    border: 2px solid green;
-    gap: 15px;
+    flex-direction: row;
+    
 }
 
 .title{

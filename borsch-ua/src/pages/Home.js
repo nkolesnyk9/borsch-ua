@@ -1,6 +1,9 @@
+import './Home.css'
 function Home() {
     return (
-        <h1> Welcome to Ukraine (gradient) </h1>
+        <div className='header'>
+        <h1> Welcome to Borsch-Ua </h1>
+        </div>
     )
     
 }

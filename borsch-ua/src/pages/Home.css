@@ -1,0 +1,29 @@
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(30, 30, 30);
+}
+h1{
+    font-size: 8rem;
+    background: rgb(32,127,217);
+    background: linear-gradient(90deg, rgba(32,127,217,1) 0%, rgba(130,196,222,1) 46%, rgba(228,227,130,1) 58%, rgba(250,237,2,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fade 1s ease-in 1s;
+    visibility: visible;
+    opacity: 0;
+}
+/* h1:hover {
+   
+    visibility: visible;
+} */
+@keyframes fade {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
