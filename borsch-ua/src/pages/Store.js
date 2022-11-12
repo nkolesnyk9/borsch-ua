@@ -1,30 +1,7 @@
-// import {productsArray} from '../productsStore'
-import ProductCard from '../components/ProductCard';
 import './Store.css'
-
-// function Store() {
-//     return(
-//         <>
-//             <h1>Welcome to the store!</h1>
-//             <div className='store-items'>
-//                 {productsArray.map((product, idx) => (
-//                     <div key={idx}>
-//                         <ProductCard  product={product}/>
-
-//                     </div>
-//                 ))}
-//             </div>
-//         </>
-        
-//     )
-// }
-
-// export default Store;
-
-import { ShopContext } from '../context/shopContext'
+import { ShopContext } from '../context/CartContext'
 import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
-
 
 const Store = () => {
   const { fetchAllProducts, products } = useContext(ShopContext);
@@ -32,16 +9,17 @@ const Store = () => {
   useEffect(() => {
     fetchAllProducts();
   }, [fetchAllProducts]);
-  //here we are saying if product is not available
 
   console.log("here are the products", products);
+
+//here we are saying if products are not available
   if (!products) return <div>Loading ....</div>;
   return (
    <>
     <h2>Welcome to the store!</h2>
     <div className='display-items'>
       {
-        products.map((product, idx) => (
+        products.map(product => (
         <Link to={`/products/${product.handle}`} key={product.id}>
         <div className='product-card'>
         <img src={product.images[0].src}></img>

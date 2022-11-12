@@ -1,58 +1,55 @@
 import React from "react";
 import styles from "./Modal.module.css";
 import { RiCloseLine } from "react-icons/ri";
-import { CartContext } from "../CartContext"
-import { useContext } from "react";
-import CartProduct from "./CartProduct";
-import { ShopContext } from "../context/shopContext";
+import { useContext, useState } from "react";
+import { ShopContext } from "../context/CartContext";
+import { Link, redirect } from 'react-router-dom'
 
 
 const Modal = ({setIsOpen}) => {
-//   const cart = useContext(CartContext)
 
-//   const checkout = async () => {
-//     await fetch('http://localhost:3003/checkout', {
-//         method: "POST",
-//         headers: {
-//             'Content-Type': 'application/json'
-//         },
-//         body: JSON.stringify({items: cart.items}) // we are passing items from our cart to our backend
-//     }).then((response) => {
-//         return response.json();
-//     }).then((response) => {
-//         if(response.url) {
-//             window.location.assign(response.url); // this will forward users over to stripe paymetn 
-//         }
-//     });
-// }
-  // const productsCount = cart.items.reduce((sum, product) => sum + product.quantity, 0)
-  const { checkout, removeLineItem} = useContext(ShopContext)
-
- 
+  const { checkout, removeLineItem } = useContext(ShopContext)
+  
+  console.log("here is the check out",checkout)
   return (
     <>
-      <div className={styles.darkBG} onClick={() => setIsOpen(false)} >
+      <div className={styles.darkBG} onClick={() => setIsOpen(false) } >
         <div className={styles.centered}>
           <div className={styles.modal}>
             <div className={styles.modalHeader}>
               <h5 className={styles.heading}>Items in your cart:</h5>
             </div>
-            <button className={styles.closeBtn} onClick={() => setIsOpen(false)}>
+            <button className={styles.closeBtn} onClick={() => setIsOpen(false) }>
             <RiCloseLine style={{ marginBottom: "-3px" }} />
             </button>
             <div className={styles.modalContent}>
-              {
-                checkout.lineItems?.length ? checkout.lineItems.map(item => (
-                  <div key={item.id}>
-                    <h2>{item.title}</h2>
+              Here is the content of the cart
+              {checkout.lineItems && checkout.lineItems.map(item => (
+                <div key={item.id}>
+                  <button className={styles.removeBtn} onClick={() => removeLineItem(item.id)}>Remove Item</button>
+                  <div>
+                  <img className={styles.cartImg} src={item.variant.image.src}></img>
                   </div>
-              
-                )) :<div>Cart is Empty</div>
-              }
+                  <div>
+                  <p>{item.title}</p>
+                  </div>
+                  <div>
+                  <p>{item.variant.price.amount}</p>
+                  </div>
+                </div>
+              ))}
             </div> 
-            <div className={styles.modalActions}>
-              <div className={styles.actionsContainer}></div>
-            </div>
+            <button className={styles.checkoutBtn}>
+            Checkout
+            <a href={checkout.webUrl} target="_blank">{checkout.webUrl}</a>
+            </button>
+              
+            {/* <div className={styles.modalActions}>
+              <div className={styles.actionsContainer}>
+              
+              
+              </div>
+            </div> */}
           </div>
         </div>
       </div>

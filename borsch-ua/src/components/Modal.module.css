@@ -128,3 +128,12 @@
     transform: none;
     background: whitesmoke;
   }
+
+  .cartImg{
+    width: 100px;
+    height: 100px;
+  }
+
+  .removeBtn:hover{
+    cursor: pointer;
+  }

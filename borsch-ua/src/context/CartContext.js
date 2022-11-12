@@ -10,18 +10,17 @@ const client = Client.buildClient({
    
 
 
-class ShopProvider extends Component {
+class CartProvider extends Component {
   state = {
     products: [],
     product: {},
     checkout: {},
-    // isCartOpen: false,
-    // isMenuOpen: false
+    // isCartOpen: false
   };
 
 
   componentDidMount() {
-    // this.createCheckout()
+    console.log("compenent did Mount")
     if (localStorage.checkout_id) {
       this.fetchCheckout(localStorage.checkout_id)
     } else {
@@ -30,10 +29,17 @@ class ShopProvider extends Component {
   }
 
   createCheckout = async () => {
+    // set to wait for a Promise and get its fulfillment value
+    
     const checkout = await client.checkout.create();
+    console.log("this is checkout", checkout.id)
+    // localStorage - comes with javascript 
     localStorage.setItem("checkout_id", checkout.id)
     this.setState({ checkout: checkout });
+    
+    
   };
+
 
   fetchCheckout = (checkoutId) => {
     client.checkout
@@ -44,28 +50,32 @@ class ShopProvider extends Component {
       .catch((error) => console.log(error));
   };
 
+  
+
   addItemToCheckout = async (variantId, quantity) => {
+  
+    console.log("here is checkout id", this.state.checkout.id)
     const lineItemsToAdd = [
       {
         variantId: variantId,
-        quantity: parseInt(quantity, 10)
+        quantity: quantity
       },
     ]
     // as per docs
+    
     const checkout = await client.checkout.addLineItems(
       this.state.checkout.id,
       lineItemsToAdd
     )
     this.setState({ checkout: checkout });
+    
 
-    // this.openCart();
+    
   };
 
   removeLineItem = async (lineItemIdsToRemove) => {
-    const checkoutId = this.state.checkout.id
-
-    client.checkout.removeLineItems(checkoutId, lineItemIdsToRemove)
-      .then(checkout => this.setState({ checkout }))
+    const checkout = await client.checkout.removeLineItems(this.state.checkout.id, lineItemIdsToRemove)
+    this.setState({ checkout: checkout })
   }
 
   fetchAllProducts = async () => {
@@ -76,39 +86,30 @@ class ShopProvider extends Component {
   fetchProductWithHandle = async (handle) => {
     const product = await client.product.fetchByHandle(handle);
     this.setState({ product: product });
-
     return product;
   };
 
-//   closeCart = () => {
-//     this.setState({ isCartOpen: false });
-//   };
-//   openCart = () => {
-//     this.setState({ isCartOpen: true });
-//   };
-
-  closeMenu = () => {
-    this.setState({ isMenuOpen: false })
-  }
-  openMenu = () => {
-    this.setState({ isMenuOpen: true })
-  }
-
+  // closeCart = () => {
+  //   this.setState({ isCartOpen: false });
+  // };
+  // openCart = () => {
+  //   this.setState({ isCartOpen: true });
+  // };
 
   render() {
  
     return (
+
+    // Use a Provider to pass the current value to the tree below.
+    // Any component can read it, no matter how deep it is.
       <ShopContext.Provider
         value={{
           ...this.state,
           fetchAllProducts: this.fetchAllProducts,
           fetchProductWithHandle: this.fetchProductWithHandle,
-          closeCart: this.closeCart,
-          openCart: this.openCart,
-          closeMenu: this.closeMenu,
-          openMenu: this.openMenu,
           addItemToCheckout: this.addItemToCheckout,
           removeLineItem: this.removeLineItem
+
         }}
       >
         {this.props.children}
@@ -116,9 +117,9 @@ class ShopProvider extends Component {
     );
   }
 }
-
+// Context.Consumer A React component that subscribes to context changes. Using this component lets you subscribe to a context within a function component.
 const ShopConsumer = ShopContext.Consumer;
 
 export { ShopConsumer, ShopContext };
 
-export default ShopProvider;
+export default CartProvider;

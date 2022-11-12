@@ -5,20 +5,21 @@ import About from "./pages/About";
 import Store from "./pages/Store";
 import Success from "./pages/Success";
 import Cancel from "./pages/Cancel";
-import CartProvider from "./CartContext";
-import ShopProvider from "./context/shopContext";
+import ShopProvider from "./context/CartContext";
 import ProductCard from "./components/ProductCard";
+
 
 function App() {
   return (
     <>
-      <CartProvider>
+
         <ShopProvider>
           <Navbar />
+
           <Routes>
-            
-              <Route path="/products/:handle" element={<ProductCard />} />
               <Route index element={<Home />} exact />
+              <Route path="/products/:handle" element={<ProductCard />} exact/>
+              
               <Route path="/about" element={<About />} />
               <Route path="/store" element={<Store />} />
               <Route path="/success" element={<Success />} />
@@ -26,7 +27,7 @@ function App() {
           
           </Routes>
         </ShopProvider>
-      </CartProvider>
+
     </>
   );
 }

@@ -8,6 +8,8 @@
 
 .cart{
     height: 30px;
+    background-color: yellow;
+   
 }
 .modal {
     position: fixed;
