@@ -18,6 +18,8 @@ const ProductCard = () => {
     }, [fetchProductWithHandle, handle])//inputing all the variables this function is depended on. So whenever handle is changes we want to recall that function 
   
 console.log("here is the product", product)
+
+
 //this will allow us to show loading state whenever there is no product or the product is still loading  
    if (!product.title) return <div>Loading...</div> 
 
@@ -43,6 +45,6 @@ console.log("here is the product", product)
 
     )
 
-    
+ 
 }
 export default ProductCard

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Client from "shopify-buy";
 
-const ShopContext = React.createContext();
+
 
 const client = Client.buildClient({
     domain: process.env.REACT_APP_SHOPIFY_DOMAIN,
@@ -9,14 +9,17 @@ const client = Client.buildClient({
    });
    
 
+const ShopContext = React.createContext();
 
 class CartProvider extends Component {
   state = {
     products: [],
     product: {},
     checkout: {},
-    // isCartOpen: false
+    
   };
+
+  
 
 
   componentDidMount() {
@@ -30,14 +33,11 @@ class CartProvider extends Component {
 
   createCheckout = async () => {
     // set to wait for a Promise and get its fulfillment value
-    
     const checkout = await client.checkout.create();
     console.log("this is checkout", checkout.id)
     // localStorage - comes with javascript 
     localStorage.setItem("checkout_id", checkout.id)
     this.setState({ checkout: checkout });
-    
-    
   };
 
 
@@ -78,6 +78,22 @@ class CartProvider extends Component {
     this.setState({ checkout: checkout })
   }
 
+  updateLineItem = async (id, lineItemsToUpdate) => {
+    
+    const lineItemsToUpdate = [
+      {
+        id: id,
+        quantity: quantity -1
+      },
+    ]
+    const checkout = await client.checkout.updateLineItems(
+      this.state.checkout.id, 
+      lineItemsToUpdate
+      )
+    this.setState({ checkout: checkout })
+  }
+
+
   fetchAllProducts = async () => {
     const products = await client.product.fetchAll();
     this.setState({ products: products });
@@ -89,12 +105,18 @@ class CartProvider extends Component {
     return product;
   };
 
-  // closeCart = () => {
-  //   this.setState({ isCartOpen: false });
-  // };
-  // openCart = () => {
-  //   this.setState({ isCartOpen: true });
-  // };
+  // getProductQuantatity = (id)  => {
+  //   console.log("LOOKING FOR PRODUCT", product)
+  //   const qty = this.state.product.find(product => this.state.product.variants[0].id === id)?.qty
+
+  //   if(qty === undefined){
+  //     return 0
+  //   }
+  //   return qty
+  // }
+  
+
+
 
   render() {
  
@@ -108,7 +130,8 @@ class CartProvider extends Component {
           fetchAllProducts: this.fetchAllProducts,
           fetchProductWithHandle: this.fetchProductWithHandle,
           addItemToCheckout: this.addItemToCheckout,
-          removeLineItem: this.removeLineItem
+          removeLineItem: this.removeLineItem,
+          getProductQuantatity: this.getProductQuantatity,
 
         }}
       >
