@@ -8,12 +8,13 @@ import { Link, redirect } from 'react-router-dom'
 
 const Modal = ({setIsOpen}) => {
 
-  const { checkout, removeLineItem, addItemToCheckout, updateLineItem, product } = useContext(ShopContext)
+  const { checkout, removeLineItem, addItemToCheckout, product } = useContext(ShopContext)
   
   console.log("here is the check out",checkout)
+  
   return (
     <>
-      <div className={styles.darkBG} onClick={() => setIsOpen(false) } >
+      <div className={styles.darkBG}  >
         <div className={styles.centered}>
           <div className={styles.modal}>
             <div className={styles.modalHeader}>
@@ -35,22 +36,27 @@ const Modal = ({setIsOpen}) => {
                   </div>
                   <div className={styles.rightPart}>
                     <div>
-                      <p>${item.variant.price.amount}</p>
+                      <p>${item.variant.price.amount * item.quantity}</p>
                     </div>
                     <div className={styles.qtyPart}>
-                      <p>QTY:{item.quantity}</p>
+                      <p>QTY:{item.quantity }</p>
                     <div className={styles.qtyBtn}> 
                       <button className={styles.minBtn} onClick={() => addItemToCheckout(item.variant.id, 1)}> +</button>
-                      <button className={styles.minBtn} onClick={() => updateLineItem(item.id, 1)}> - </button>
+                      <button className={styles.minBtn} onClick={() => addItemToCheckout(item.variant.id, -1)}> - </button>
+                      {console.log("QTY", item.quantity * item.variant.price.amount )}
                   </div>
                   <button className={styles.removeBtn} onClick={() => removeLineItem(item.id)}>delete</button>
                   </div>
                   </div>
-                  
+                  {console.log("lineitems", checkout.lineItems)}
                 </div>
               ))}
             </div> 
-            
+            <div>
+            {checkout.lineItems && checkout.lineItems.map(item => (
+              <p>Total price: {item.variant.price.amount*item.quantity}</p>
+            ))}
+            </div>
             <button className={styles.checkoutBtn}>
             Checkout
             <a href={checkout.webUrl} target="_blank">{checkout.webUrl}</a>

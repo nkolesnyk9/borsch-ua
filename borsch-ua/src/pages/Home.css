@@ -1,9 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Oriya:wght@600&display=swap");
+
 .header{
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     background: rgb(30, 30, 30);
+    font-family: 'Noto Serif Oriya', serif;
 }
 h1{
     font-size: 8rem;
@@ -11,15 +14,18 @@ h1{
     background: linear-gradient(90deg, rgba(32,127,217,1) 0%, rgba(130,196,222,1) 46%, rgba(228,227,130,1) 58%, rgba(250,237,2,1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: fade 1s ease-in 1s;
-    visibility: visible;
-    opacity: 0;
+    /* animation: fade 1s ease-in 1s;
+    visibility: visible; */
+    /* opacity: 0; */
+    animation: fadeInAnimation ease-in 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 /* h1:hover {
    
     visibility: visible;
 } */
-@keyframes fade {
+@keyframes fadeInAnimation {
     0%{
         opacity: 0;
     }
