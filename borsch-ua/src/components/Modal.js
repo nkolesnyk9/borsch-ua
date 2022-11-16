@@ -9,6 +9,10 @@ import { Link, redirect } from 'react-router-dom'
 const Modal = ({setIsOpen}) => {
 
   const { checkout, removeLineItem, addItemToCheckout, product } = useContext(ShopContext)
+
+  // const [setTotalPrice] = useState();
+  // <p setTotalPrice={item.variant.price.amount * item.quantity}>Total Price:{setTotalPrice}</p>
+
   
   console.log("here is the check out",checkout)
   
@@ -54,7 +58,7 @@ const Modal = ({setIsOpen}) => {
             </div> 
             <div>
             {checkout.lineItems && checkout.lineItems.map(item => (
-              <p>Total price: {item.variant.price.amount*item.quantity}</p>
+              <p>Total price: {item.variant.price.amount * item.quantity}</p>
             ))}
             </div>
             <button className={styles.checkoutBtn}>
