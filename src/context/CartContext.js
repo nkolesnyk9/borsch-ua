@@ -94,7 +94,6 @@ class CartProvider extends Component {
           fetchProductWithHandle: this.fetchProductWithHandle,
           addItemToCheckout: this.addItemToCheckout,
           removeLineItem: this.removeLineItem,
-          updateLineItem: this.updateLineItem,
         }}
       >
         {this.props.children}

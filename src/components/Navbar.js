@@ -13,15 +13,15 @@ function Navbar() {
     
     const [isOpen, setIsOpen] = useState(false);
     
-
+   
 
     return (
         <>
         <div className="navbar">
-        <Link to="/">Welcome to Ukraine </Link>
-        <Link to="/about">About </Link>  
-        <NavLink to="/store">Store</NavLink>
-        <button className="cart" onClick={() => setIsOpen(true)}>Cart
+        <Link className="links" to="/">Home Page </Link>
+        <Link className="links" to="/about">About </Link>  
+        <NavLink className="links" to="/store">Store</NavLink>
+        <button className="cart"  onClick={() => setIsOpen(true)}>Cart <MdShoppingCart />
         </button>
         </div>
         {isOpen && <Modal setIsOpen={setIsOpen} />}

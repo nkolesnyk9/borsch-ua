@@ -6,12 +6,29 @@
 .display-items{
     display: grid;
     grid-template-columns: 33% 33% 33%;
+    gap: 8px;
 }
 
 .product-card{
+    height: 700px;
     border: 2px solid green;
+    
 }
 
 .product-card:hover{
     opacity: 80%;
+}
+
+.product-image{
+    height: 500px;
+}
+
+.product-image img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.product-text{
+    height: 200px;
 }

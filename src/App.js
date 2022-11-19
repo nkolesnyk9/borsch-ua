@@ -3,8 +3,8 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Store from "./pages/Store";
-import Success from "./pages/Success";
-import Cancel from "./pages/Cancel";
+import Accessesories from "./pages/Accessories";
+import Apparel from "./pages/Apparel";
 import ShopProvider from "./context/CartContext";
 import ProductCard from "./components/ProductCard";
 
@@ -22,8 +22,8 @@ function App() {
               
               <Route path="/about" element={<About />} />
               <Route path="/store" element={<Store />} />
-              <Route path="/success" element={<Success />} />
-              <Route path="/cancel" element={<Cancel />} />
+              <Route path="/store/accessories" element={<Accessesories />} />
+              <Route path="/store/apparel" element={<Apparel />} />
           
           </Routes>
         </ShopProvider>

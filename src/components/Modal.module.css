@@ -8,13 +8,13 @@
     transform: translate(-50%, -50%);
     position: absolute;
   } 
-  
+
+  /* centering modal position */
   .centered {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* border: 2px solid yellow; */
   }
   
   .modal {
@@ -22,21 +22,12 @@
     height: 450px;
     background: white;
     color: rgb(174, 20, 20);
-    z-index: 10;
+    z-index: 1000;
     border-radius: 16px;
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
     overflow: auto;
   }
-  
-  .modalHeader {
-    height: 50px;
-    background: white;
-    overflow: hidden;
-    border-top-left-radius: 16px;
-    border-top-right-radius: 16px;
-
-  }
-  
+   
   .heading {
     margin: 0;
     padding: 10px;
@@ -44,7 +35,6 @@
     font-weight: 500;
     font-size: 18px;
     text-align: center;
-    /* border: 2px solid purple; */
   }
   
   .modalContent {
@@ -54,15 +44,13 @@
     font-size: 14px;
     color: #2c3e50;
     text-align: center;
-    /* border: 2px solid red;
-    overflow: auto; */
+    z-index: 5000;
   }
   
   .itemCard{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    /* border: 2px solid greenyellow; */
   }
 
   .leftPart{
@@ -77,14 +65,14 @@
     flex-direction: column;
     /* border: 2px solid orange; */
   }
-  .removeBtn{
+  .deleteBtn{
     width: 60px;
     height: 30px;
     background-color: white;
     border: none;
   }
 
-  .removeBtn:hover{
+  .deleteBtn:hover{
     cursor: pointer;
     background-color: black;
     color: white;

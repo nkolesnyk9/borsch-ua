@@ -25,7 +25,7 @@ const [isOpen, setIsOpen] = useState(false);
    if (!product.title) return <div>Loading...</div> 
 
     return (
-    
+    <div className="card-page">
         <div className="card">
             <div className="card-image">
                 <img src={product.images[0].src}></img>
@@ -42,12 +42,8 @@ const [isOpen, setIsOpen] = useState(false);
                 </button>
                 {isOpen && <Modal setIsOpen={setIsOpen} />}
             </div>
-               
-
         </div>
-
+        </div>
     )
-
- 
 }
 export default ProductCard

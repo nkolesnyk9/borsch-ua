@@ -1,8 +1,10 @@
-import pic from "../images/wheat1.jpeg"
+
+import './About.css'
+
 function About() {
     return (
-        <div>
-        <img src={pic} />
+        <div className="about-container" >
+        {/* <img src={pic} /> */}
         <h1>Page about this store or smt</h1>
          
          </div>
