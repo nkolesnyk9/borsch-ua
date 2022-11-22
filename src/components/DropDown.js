@@ -2,12 +2,15 @@ import './DropDown.css'
 import React from 'react';
 import { Link} from "react-router-dom";
 
+import {AiFillCaretDown} from "react-icons/ai";
+
+
 
 const DropMenu = () => {
   
     return (
       <Dropdown
-        trigger={<button>Dropdown</button>}
+        trigger={<button> Categories <AiFillCaretDown /></button>}
         menu={[
           <Link to="/store/accessories"> Accessories </Link>,
           <Link to="/store/apparel"> Apparel </Link>,

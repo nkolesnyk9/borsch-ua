@@ -1,0 +1,24 @@
+.subscribe{
+    height: 350px;
+    /* border: 2px solid red; */
+    text-align: center;
+    padding-top: 50px;
+}
+
+.subscribe h2{
+    font-size: 48px;
+}
+
+.subscribe button{
+    padding: 20px 30px;
+    font-size: 17px;
+    background-color: #D4A373;
+    color: #FEFAE0;
+    font-weight: bold;
+    border: none;
+}
+
+.subscribe button:hover{
+    opacity: 80%;
+    cursor: pointer;
+}

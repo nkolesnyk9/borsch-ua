@@ -17,7 +17,10 @@ const Store = () => {
   if (!products) return <div>Loading ....</div>;
   return (
     <>
-      <h2>Welcome to the store! <DropMenu /></h2> 
+      <div className="store-nav">
+      <h2>Welcome to the store! </h2> 
+      <DropMenu />
+      </div>
       
       <div className="display-items">
         {products.map((product) => (

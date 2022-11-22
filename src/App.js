@@ -7,6 +7,8 @@ import Accessesories from "./pages/Accessories";
 import Apparel from "./pages/Apparel";
 import ShopProvider from "./context/CartContext";
 import ProductCard from "./components/ProductCard";
+import Footer from "./components/Footer";
+
 
 
 function App() {
@@ -24,8 +26,9 @@ function App() {
               <Route path="/store" element={<Store />} />
               <Route path="/store/accessories" element={<Accessesories />} />
               <Route path="/store/apparel" element={<Apparel />} />
-          
           </Routes>
+          
+          <Footer />
         </ShopProvider>
 
     </>

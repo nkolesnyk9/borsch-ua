@@ -1,0 +1,35 @@
+.images-container {
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: #E9EDC9;
+}
+
+.idiv-img {
+
+  height: 350px;
+  width: 350px;
+  margin-top: 20px;
+}
+
+.one {
+  background-image: url("../images/girl.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.two {
+    background-image:url("../images/donate.jpeg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+.three {
+    background-image: url("../images/heart.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }

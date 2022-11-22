@@ -3,6 +3,7 @@
     grid-template-columns: 33% 33% 33%;
     gap: 10px;
     margin-left: 10px;
+    background-image: none;
 }
 
 .product-card{
@@ -41,3 +42,11 @@ a:-webkit-any-link{
 a:-webkit-any-link:hover{
     text-decoration: underline;
 }
+
+.store-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
