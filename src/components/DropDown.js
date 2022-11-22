@@ -14,6 +14,7 @@ const DropMenu = () => {
         menu={[
           <Link to="/store/accessories"> Accessories </Link>,
           <Link to="/store/apparel"> Apparel </Link>,
+          <Link to="/store/local"> Local </Link>,
         ]}
       />
     );

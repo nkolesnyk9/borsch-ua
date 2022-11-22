@@ -2,10 +2,10 @@ import { ShopContext } from "../context/CartContext";
 import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import DropMenu from "../components/DropDown";
-import './Store.css'
+import "./Store.css"
 
 
-const Apparel = () => {
+const Local = () => {
   const { fetchAllProducts, products } = useContext(ShopContext);
 
   useEffect(() => {
@@ -13,7 +13,7 @@ const Apparel = () => {
   }, [fetchAllProducts]);
 
   const filterProd = products.filter(product => {
-    return product.productType == "apparel" 
+    return product.productType == "local" 
   })
   console.log("here are filter products", filterProd);
   console.log("here are the products", products);
@@ -22,8 +22,9 @@ const Apparel = () => {
 
   return (
     <>
-    <div className="store-nav">
-    <h2>Apparel</h2> 
+      
+      <div className="store-nav">
+      <h2>Products from local usa sellers</h2> 
       <DropMenu />
       </div>
       
@@ -48,4 +49,4 @@ const Apparel = () => {
   );
 };
 
-export default Apparel;
+export default Local;

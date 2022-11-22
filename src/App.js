@@ -8,6 +8,7 @@ import Apparel from "./pages/Apparel";
 import ShopProvider from "./context/CartContext";
 import ProductCard from "./components/ProductCard";
 import Footer from "./components/Footer";
+import Local from "./pages/Local";
 
 
 
@@ -26,6 +27,7 @@ function App() {
               <Route path="/store" element={<Store />} />
               <Route path="/store/accessories" element={<Accessesories />} />
               <Route path="/store/apparel" element={<Apparel />} />
+              <Route path="/store/local" element={<Local />} />
           </Routes>
           
           <Footer />

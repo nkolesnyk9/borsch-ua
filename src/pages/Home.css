@@ -1,11 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Oriya:wght@600&display=swap");
 
 body {
-  background-image: url("../images/wheat1.jpeg");
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  
 }
 
 .header {
@@ -13,6 +9,11 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  background-image: url("../images/wheat1.jpeg");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 
   font-family: "Noto Serif Oriya", serif;
   /* background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
