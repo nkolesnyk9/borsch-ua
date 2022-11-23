@@ -12,13 +12,16 @@
 .subscribe button{
     padding: 20px 30px;
     font-size: 17px;
-    background-color: #D4A373;
+    background-color: #CCD5AE;
     color: #FEFAE0;
     font-weight: bold;
     border: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 3px;
 }
 
 .subscribe button:hover{
     opacity: 80%;
     cursor: pointer;
+    
 }

@@ -26,6 +26,8 @@ body {
 .header h1 {
   font-size: 7rem;
   background: rgba(254, 250, 224, 0.8);
+  
+
   /* background: rgb(32, 127, 217);
   background: linear-gradient(
     90deg,

@@ -3,13 +3,20 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    padding: 2rem;
+    justify-content: space-around;
+    /* padding: 2rem; */
     /* background-image: url("../images/nav8.png"); */
-    height: 92px;
+    height: 70px;
     font-size: 22px;
-    padding: 10px;
-    margin-bottom: 1px;
+    padding: 5px;
+    /* margin-bottom: 1px; */
+    /* background: #D4A373; */
+    background: transparent;
+    background-color: rgba(254, 250, 224, 0.3) ;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
 }
 
 .links{
@@ -20,7 +27,7 @@
 
 .links:hover {
     text-decoration:underline;
-    color: #7f5539;
+    color: #7f5539;;
 
 }
 
@@ -29,14 +36,15 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    font-family: 'Noto Serif Oriya', serif;
+    font-family: 'Montserrat', sans-serif;
     width: 90px;
     font-size: 22px;
     border-radius: 5px;
     padding-top: 3px;
     border: none;
-    color: #7f5539;
-    background-color: rgba(255, 255, 255, 0);
+    color: #FEFAE0;
+    background-color: #CCD5AE;
+    margin-right: 10px;
    
 }
 

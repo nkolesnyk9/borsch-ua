@@ -4,14 +4,18 @@
   }
   
 .dropdown button{
-  height: 30px;
+  height: 35px;
   width: 150px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: white;
-  font-family: 'Noto Serif Oriya', serif;
+  background-color: #CCD5AE;
+  font-family: 'Montserrat', sans-serif;
   font-size: 18px;
+  color: #FEFAE0 ;
+  padding: 8px;
+  border: none;
+  border-radius: 3px;
 
 }
   .menu {
@@ -24,19 +28,28 @@
     border: 1px solid grey;
     width: 150px;
     height: 100px;
-    background-color: white;
+    background-color: #FEFAE0 ;
+    border-radius: 3px;
   }
   
   .menu > li {
     margin: 0;
-    background-color: white;
+    background-color: #FEFAE0 ;
+    padding: 5px;
+    color: #CCD5AE;
   }
   
   .menu > li:hover {
-    background-color: lightgray;
+    background-color: #E9EDC9;
   }
+
+  .drop-links{
+    color: #D4A373
+  }
+
   
-  .menu > li > button {
+  
+  /* .menu > li > button {
     width: 100%;
     height: 100%;
     text-align: left;
@@ -47,4 +60,5 @@
     margin: 0;
     font: inherit;
     cursor: pointer;
-  }
+    
+  } */

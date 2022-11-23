@@ -1,13 +1,22 @@
+.about-parent{
+  padding-top: 110px;
+}
 .about-container{
   height: 500px;
   width: 800px;
   background-color:#FEFAE0;
   line-height: 28px;
   text-align: center;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
  
  
 }
 
 .about-container h1 {
   margin: 0;
+  padding: 0;
 }

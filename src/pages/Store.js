@@ -17,8 +17,9 @@ const Store = () => {
   if (!products) return <div>Loading ....</div>;
   return (
     <>
+    
       <div className="store-nav">
-      <h2>Welcome to the store! </h2> 
+      <h2> BorschUA </h2> 
       <DropMenu />
       </div>
       
@@ -37,6 +38,7 @@ const Store = () => {
           </Link>
         ))}
       </div>
+   
     </>
   );
 };

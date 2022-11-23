@@ -12,9 +12,9 @@ const DropMenu = () => {
       <Dropdown
         trigger={<button> Categories <AiFillCaretDown /></button>}
         menu={[
-          <Link to="/store/accessories"> Accessories </Link>,
-          <Link to="/store/apparel"> Apparel </Link>,
-          <Link to="/store/local"> Local </Link>,
+          <Link className='drop-links' to="/store/accessories"> Accessories </Link>,
+          <Link className='drop-links' to="/store/apparel"> Apparel </Link>,
+          <Link className='drop-links' to="/store/local"> Local </Link>,
         ]}
       />
     );
