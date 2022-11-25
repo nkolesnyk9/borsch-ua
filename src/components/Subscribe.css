@@ -1,27 +1,72 @@
-.subscribe{
-    height: 350px;
-    /* border: 2px solid red; */
-    text-align: center;
-    padding-top: 50px;
+.subscribe {
+  height: 450px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.subscribe h2{
-    font-size: 48px;
+.subscribe h2 {
+  font-size: 48px;
 }
 
-.subscribe button{
-    padding: 20px 30px;
-    font-size: 17px;
-    background-color: #CCD5AE;
-    color: #FEFAE0;
-    font-weight: bold;
-    border: none;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border-radius: 3px;
+.subscribe button {
+  height: 70px;
+  width: 150px;
+  font-size: 22px;
+  background-color: #ccd5ae;
+  color: #fefae0;
+  font-weight: bold;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 3px;
+  margin-top: 15px;
 }
 
-.subscribe button:hover{
-    opacity: 80%;
-    cursor: pointer;
+.subscribe button:hover {
+  opacity: 80%;
+  cursor: pointer;
+}
+
+
+/* ========== MOBILE ================ */
+@media (min-width: 425px) {
+    .subscribe h2 {
+        font-size: 32px;
+      }
+
+      .subscribe button {
+        height: 55px;
+        width: 100px;
+        font-size: 16px;
+      }
+  }
+  
+  /* ============== TABLET  768px ================= */
+  @media (min-width: 768px) {
+    .subscribe h2 {
+        font-size: 40px;
+      }
+
+      .subscribe button {
+        height: 60px;
+        width: 120px;
+        font-size: 20px;
+      }
+  }
+  
+  /* ======== LAPTOP 1024px ======== */
+  @media (min-width: 1024px) {
+    .subscribe h2 {
+        font-size: 48px;
+      }
+  }
+  
+  /* ======== EXTRA LARGE SCREEN ======== */
+  @media (max-width: 2560px) {
+    .subscribe h2 {
+        /* font-size: 62px; */
+      }
     
-}
+    }

@@ -3,15 +3,15 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  align-items: center;
   background-color: #D4A373;
   margin-bottom: 45px;
 }
 
 .idiv-img {
-
   height: 350px;
   width: 350px;
-  margin-top: 20px;
+
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
@@ -35,4 +35,37 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+  }
+
+  /* ========== MOBILE ================ */
+@media (min-width: 425px) {
+  .idiv-img {
+    height: 150px;
+    width: 150px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+}
+
+/* ============== TABLET  768px ================= */
+@media (min-width: 768px) {
+  .idiv-img {
+    height: 250px;
+    width: 250px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+}
+
+/* ======== LAPTOP 1024px ======== */
+@media (min-width: 1024px) {
+  .idiv-img {
+    height: 300px;
+    width: 300px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+}
+
+/* ======== EXTRA LARGE SCREEN ======== */
+@media (min-width: 2560px) {
+  
+
   }

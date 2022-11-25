@@ -31,7 +31,7 @@
   .heading {
     margin: 0;
     padding: 10px;
-    color: #2c3e50;
+    color: #7f5539;
     font-weight: 500;
     font-size: 18px;
     text-align: center;
@@ -42,7 +42,7 @@
     flex-direction: column;
     padding: 10px;
     font-size: 14px;
-    color: #2c3e50;
+    color: #7f5539;
     text-align: center;
     z-index: 5000;
   }
@@ -61,6 +61,7 @@
     /* border: 2px solid blueviolet; */
     align-items: flex-start;
     margin-left: 5px;
+    width: 300px;
   }
 
   .rightPart{
@@ -71,21 +72,23 @@
 
   .thirdPart{
     /* border: 2px solid blue; */
-    margin-right: 5px;
+    margin-right: 10px;
 
   }
   .deleteBtn{
     width: 60px;
     height: 30px;
-    background-color: white;
+    color: #7f5539;
     border: none;
+    background-color: white;
   }
 
   .deleteBtn:hover{
     cursor: pointer;
-    background-color: black;
-    color: white;
+    background-color: #CCD5AE ;
     font-size: 15px;
+    color: #FEFAE0;
+    border-radius:  3px;
   }
   .qtyBtn{
     display: flex;
@@ -96,8 +99,8 @@
 
 }
   .minBtn{
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
+    background-color: white;
+    color: #7f5539;
     width: 30px;
     height: 30px;
     border: none;
@@ -105,12 +108,16 @@
     font-weight: bold;
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
     /* border: 2px solid green; */
 }
 
   .minBtn:hover{ 
-    border: 1px solid black;
     cursor: pointer;
+    background-color: #CCD5AE ;
+    color: #FEFAE0;
+    border-radius:  3px;
 
   }
   
@@ -145,18 +152,30 @@
   }
 
   .checkoutBtn{
-    background-color: white ;
+    background-color: #CCD5AE ;
     margin-left: 15px;
     margin-bottom: 20px;
     padding: 10px;
-    border: 1px solid black;
+    border-radius: 3px;
     font-size: 18px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   
+
+  }
+
+  .checkoutBtn a{
+    color: #FEFAE0;
+    font-weight: bold;
+   
+    
     
 
   }
 
   .totalCost{
     margin-left: 15px;
+    color: #7f5539;
 
   }
 

@@ -3,6 +3,9 @@ import React, {useEffect, useContext, useState} from "react"
 import {useParams} from 'react-router-dom'
 import { ShopContext } from "../context/CartContext"
 import Modal from "./Modal"
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+AOS.init();
 
 
 const ProductCard = () => {
@@ -26,7 +29,7 @@ const [isOpen, setIsOpen] = useState(false);
 
     return (
     <div className="card-page">
-        <div className="card">
+        <div className="card" data-aos="zoom-in" data-aos-duration="2000">
             <div className="card-image">
                 <img src={product.images[0].src}></img>
             </div>

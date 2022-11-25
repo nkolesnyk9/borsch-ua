@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Oriya:wght@600&display=swap");
 
-body {
-  
-}
-
 .header {
   display: flex;
   justify-content: center;
@@ -14,41 +10,18 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-
   font-family: "Noto Serif Oriya", serif;
-  /* background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("../images/polina-rytova-1dGMs4hhcVA-unsplash\ \(1\)-modified.jpg");
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; */
 }
 .header h1 {
   font-size: 7rem;
   background: rgba(254, 250, 224, 0.8);
-  
-
-  /* background: rgb(32, 127, 217);
-  background: linear-gradient(
-    90deg,
-    rgba(32, 127, 217, 1) 0%,
-    rgba(130, 196, 222, 1) 46%,
-    rgba(228, 227, 130, 1) 58%,
-    rgba(250, 237, 2, 1) 100%
-  ); */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  /* animation: fade 1s ease-in 1s;
-    visibility: visible; */
-  /* opacity: 0; */
   animation: fadeInAnimation ease-in 3s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
-/* h1:hover {
-   
-    visibility: visible;
-} */
+
 @keyframes fadeInAnimation {
   0% {
     opacity: 0;
@@ -57,3 +30,39 @@ body {
     opacity: 1;
   }
 }
+
+/* ========== MOBILE ================ */
+@media (min-width: 425px) {
+  .header h1 {
+    font-size: 2rem;
+  }
+}
+
+/* ============== TABLET  768px ================= */
+@media (min-width: 768px) {
+  .header h1 {
+    font-size: 4rem;
+  }
+}
+
+/* ======== LAPTOP 1024px ======== */
+@media (min-width: 1024px) {
+  .header h1 {
+    font-size: 5.5rem;
+  }
+}
+
+/* ======== EXTRA LARGE SCREEN ======== */
+@media (min-width: 2560px) {
+  .header h1 {
+    font-size: 8rem;
+  }
+}
+
+
+
+
+
+
+
+

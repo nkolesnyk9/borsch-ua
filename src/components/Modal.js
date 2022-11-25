@@ -59,7 +59,7 @@ const Modal = ({ setIsOpen }) => {
                     </div>
                       <div className={styles.thirdPart}>
                         <div className={styles.qtyPart}>
-                          <p>QTY:{item.quantity}</p>
+                          <p>QTY: {item.quantity}</p>
                           <div className={styles.qtyBtn}>
                             <button
                               className={styles.minBtn}
