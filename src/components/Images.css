@@ -38,11 +38,14 @@
   }
 
   /* ========== MOBILE ================ */
-@media (min-width: 425px) {
+@media (max-width: 425px) {
   .idiv-img {
     height: 150px;
     width: 150px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .images-container {
+    height: 200px;
   }
 }
 
@@ -53,7 +56,11 @@
     width: 250px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
+  .images-container {
+    height: 350px;
+  }
 }
+
 
 /* ======== LAPTOP 1024px ======== */
 @media (min-width: 1024px) {

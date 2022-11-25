@@ -4,6 +4,7 @@ import {useState, useContext} from 'react'
 import Modal from "./Modal";
 import {MdShoppingCart} from 'react-icons/md'
 import {ShopContext} from '../context/CartContext'
+import Sidebar from "./Sidebar";
 
 
 function Navbar() {
@@ -17,7 +18,9 @@ function Navbar() {
 
     return (
         <>
-        <div className="navbar">
+        <div>
+        <Sidebar  />
+        <div className="navbar" >
         <Link className="links" to="/">Home Page </Link>
         <Link className="links" to="/about">About </Link>  
         <NavLink className="links" to="/store">Store</NavLink>
@@ -25,6 +28,7 @@ function Navbar() {
         </button>
         </div>
         {isOpen && <Modal setIsOpen={setIsOpen} />}
+        </div>
         </>
     )
 

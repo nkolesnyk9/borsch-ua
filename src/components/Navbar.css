@@ -47,3 +47,19 @@
    text-decoration: underline;
 }
 
+.outer-container{
+    display: none;
+}
+/* ========== MOBILE ================ */
+@media (max-width: 425px) {
+    .links{
+        display: none;
+    }
+
+    .navbar{
+        
+        justify-content: flex-end;
+        
+       
+    }
+}
