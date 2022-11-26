@@ -101,11 +101,13 @@ const Modal = ({ setIsOpen }) => {
             <div className={styles.totalCost}>
               <p>Total price: {total.toFixed(2)}</p>
             </div>
+            <div className={styles.parentCheckOut}>
             <button className={styles.checkoutBtn}>
               <a href={checkout.webUrl} target="_blank">
                 Checkout
               </a>
             </button>
+            </div>
           </div>
         </div>
       </div>

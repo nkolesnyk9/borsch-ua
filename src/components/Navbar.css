@@ -1,68 +1,88 @@
 .navbar {
-    /* border: 2px solid rgb(0, 213, 255); */
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    height: 70px;
-    font-size: 22px;
-    padding: 5px;
-    background: transparent;
-    background-color: rgba(254, 250, 224, 0.2) ;
-    position: fixed;
-    width: 100%;
-    z-index: 10;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+  /* border: 2px solid rgb(0, 213, 255); */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  height: 70px;
+  font-size: 22px;
+  padding: 5px 15px;
+  background: transparent;
+  background-color: rgba(254, 250, 224, 0.2);
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
 }
 
-.links{
-    text-decoration: none;
-    color: #7f5539;
+.links {
+  text-decoration: none;
+  color: #7f5539;
+  padding: 5px;
+  border-radius: 3px;
 }
 
 .links:hover {
-    text-decoration:underline;
-    color: #7f5539;;
+  text-decoration: underline;
+  color: #fefae0;
+  background-color: #d4a373;
 }
 
-.cart{
-    height: 35px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Montserrat', sans-serif;
-    width: 90px;
-    font-size: 22px;
-    border-radius: 3px;
-    border: none;
-    color: #FEFAE0;
-    background-color: #CCD5AE;
-    margin-right: 10px;
-    padding: 10px;
-   
+.cart {
+  height: 47px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  width: 90px;
+  font-size: 22px;
+  border-radius: 3px;
+  border: none;
+  color: #7f5539;
+  background-color: #fefae000;
+  margin-right: 10px;
+  padding: 10px;
 }
 
 .cart:hover {
-   text-decoration: underline;
+  text-decoration: underline;
+  color: #fefae0;
+  background-color: #d4a373;
 }
 
-.outer-container{
-    display: none;
+.outer-container {
+  display: none;
 }
+
 /* ========== MOBILE ================ */
-@media (max-width: 425px) {
+@media (min-width: 320px) and (max-width: 425px) {
     .navbar {
-        height: 50px;
-        font-size: 15px;
-    }
-
-    .cart{
-        height: 25px;
+        height: 40px;
+        font-size: 12px;
+      }
+    
+      .cart {
+        height: 15px;
         width: 70px;
-        font-size: 15px;
-     
+        font-size: 12px;
+    
         padding: 5px;
-       
-    }
-}
+      }
+  }
+  
+  /* ============== TABLET  768px ================= */
+  @media (min-width: 425px) and (max-width: 768px) {
+   
+  }
+  
+  /* ======== LAPTOP 1024px ======== */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    
+  }
+  
+  /* ======== EXTRA LARGE SCREEN ======== */
+  @media (min-width: 1024px) and (max-width: 1440px) {
+   
+  }
+

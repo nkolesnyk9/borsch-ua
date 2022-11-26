@@ -15,8 +15,8 @@
   height: 70px;
   width: 150px;
   font-size: 22px;
-  background-color: #ccd5ae;
   color: #fefae0;
+  background-color: #d4a373;
   font-weight: bold;
   border: none;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -29,44 +29,47 @@
   cursor: pointer;
 }
 
-
 /* ========== MOBILE ================ */
-@media (max-width: 425px) {
-    .subscribe h2 {
-        font-size: 32px;
-      }
-
-      .subscribe button {
-        height: 55px;
-        width: 100px;
-        font-size: 16px;
-      }
+@media (min-width: 320px) and (max-width: 425px) {
+  .subscribe h2 {
+    font-size: 20px;
   }
-  
-  /* ============== TABLET  768px ================= */
-  @media (min-width: 768px) {
-    .subscribe h2 {
-        font-size: 40px;
-      }
 
+  .subscribe button {
+    height: 40px;
+    width: 70px;
+    font-size: 12px;
+  }
+
+  .subscribe {
+    height: 300px;
+   
+  }
+}
+
+/* ============== TABLET  768px ================= */
+@media (min-width: 426px) and (max-width: 768px) {
+    .subscribe h2 {
+        font-size: 35px;
+      }
+    
       .subscribe button {
         height: 60px;
         width: 120px;
         font-size: 20px;
       }
-  }
-  
-  /* ======== LAPTOP 1024px ======== */
-  @media (min-width: 1024px) {
-    .subscribe h2 {
-        font-size: 48px;
+      .subscribe {
+        height: 350px;
+       
       }
-  }
-  
-  /* ======== EXTRA LARGE SCREEN ======== */
-  @media (max-width: 2560px) {
-    .subscribe h2 {
-        /* font-size: 62px; */
-      }
-    
-    }
+}
+
+/* ======== LAPTOP 1024px ======== */
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+
+/* ======== EXTRA LARGE SCREEN ======== */
+@media (min-width: 1024px) and (max-width: 1440px) {
+}
+
+

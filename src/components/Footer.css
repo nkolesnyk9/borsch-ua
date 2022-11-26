@@ -27,3 +27,16 @@
     margin-right: 5px;
     color: #7f5539;
 }
+
+/* ========== MOBILE ================ */
+@media (min-width: 320px) and (max-width: 425px) {
+    .text h3{
+        font-size: 10px;
+       
+    }
+    .footer {
+        height:30px;
+      
+        
+    }
+  }

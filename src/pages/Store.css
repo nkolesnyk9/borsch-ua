@@ -12,7 +12,6 @@
 
 .product-card{
     height: 500px;
-    /* border: 2px solid green; */
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
     border-radius: 5px;
     
@@ -65,9 +64,69 @@ a:-webkit-any-link:hover{
     padding-left: 10px;
 }
 
+
+/* ========== MOBILE ================ */
+@media (min-width: 320px) and (max-width: 425px) {
+    .display-items{
+        display: grid;
+        grid-template-columns: 1fr;
+        font-size: 15px;
+    }
+    .product-card{
+        height: 300px;
+        border-radius: 5px;
+    }
+
+    .product-image{
+        height: 200px;
+    }
+
+  }
+  
+  /* ============== TABLET  768px ================= */
+  @media (min-width: 426px) and (max-width: 768px) {
+    .display-items{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        font-size: 15px;
+    }
+    .product-card{
+        height: 300px;
+        border-radius: 5px;
+    }
+
+    .product-image{
+        height: 200px;
+    }
+  }
+  
+  /* ======== LAPTOP 1024px ======== */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .display-items{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        font-size: 15px;
+    }
+    .product-card{
+        height: 300px;
+        border-radius: 5px;
+      
+    }
+
+    .product-image{
+        height: 200px;
+    }
+  }
+  
+  /* ======== EXTRA LARGE SCREEN ======== */
+  @media (min-width: 1024px) and (max-width: 1440px) {
+    
+  }
+
+
 /* ======== Laptop ======== */
 @media (max-width: 1024px) {
-    .display-items{
+    /* .display-items{
         display: grid;
         grid-template-columns: 33% 33% 33%;
         gap: 10px;
@@ -75,17 +134,17 @@ a:-webkit-any-link:hover{
         margin-right: 20px;
         background-image: none;
         
-    }
+    } */
 
-    .product-card{
+    /* .product-card{
         height: 400px;
-        /* border: 2px solid green; */
+      
         box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
         border-radius: 5px;
         
-    }
+    } */
 
-    .product-image{
+    /* .product-image{
         height: 300px;
     }
     
@@ -100,13 +159,13 @@ a:-webkit-any-link:hover{
         margin-left: 10px;
         color: black;
      
-    }
+    } */
 }
 
 
 /* ============== TABLET ================= */
 @media (max-width: 768px) {
-    .display-items{
+    /* .display-items{
         display: grid;
         grid-template-columns: 50% 50%;
         gap: 10px;
@@ -114,27 +173,14 @@ a:-webkit-any-link:hover{
         margin-right: 20px;
         background-image: none;
         
-    }
+    } */
 }
 
-/* ========== MOBILE ================ */
-@media (max-width: 425px) {
-    .display-items{
-        display: grid;
-        grid-template-columns: 100%;
-        gap: 10px;
-        margin-left: 10px;
-        margin-right: 10px;
-        background-image: none;
-        
-    }
 
-    
-}
 
 /* ======== EXTRA LARGE SCREEN ======== */
 @media (min-width: 2560px) {
-    .display-items{
+    /* .display-items{
         display: grid;
         grid-template-columns: 25% 25% 25% 25%;
         gap: 10px;
@@ -142,7 +188,7 @@ a:-webkit-any-link:hover{
         margin-right: 20px;
         background-image: none;
         
-    }
+    } */
 }
 
 

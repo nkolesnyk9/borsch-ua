@@ -27,47 +27,65 @@
 .about-container h1 {
   margin: 0;
   padding: 0;
+  color: #7f5539;
+
+}
+
+.bold{
+  font-weight: 900;
+  font-weight: bolder;
+  font-style: italic;
+  color: #7f5539;
+  
 }
 
 
 
-@media (max-width: 600px) {
+/* ========== MOBILE ================ */
+@media (min-width: 320px) and (max-width: 425px) {
   .about-container {
-    width: 450px;
-    font-size: 12px;
-    padding: 0;
+    height: 400px;
+    width: 310px;
+    line-height: 18px;
+    padding: 0 5px;
+    margin: 10px auto;
+    margin-bottom: 10px;
+  }
+  .about-container p{
+    font-size: 10px;
+  }
+  .about-parent {
+    padding-top: 50px;
+    
   }
 }
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-  .about-container {
-    width: 550px;
-    font-size: 16px;
-  }
-}
+
 /* ============== TABLET  768px ================= */
-@media (min-width: 768px) {
+@media (min-width: 426px) and (max-width: 768px) {
   .about-container {
+    height: 400px;
     width: 700px;
+    line-height: 25px;
+    padding: 0 5px;
+
+    margin: 10px auto;
+    margin-bottom: 10px;
+  }
+  .about-container p{
+    font-size: 15px;
+  }
+  .about-parent {
+    padding-top: 90px;
+    
   }
 }
-
 /* ======== LAPTOP 1024px ======== */
-@media (min-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
+  
 }
 
 /* ======== EXTRA LARGE SCREEN ======== */
-@media (min-width: 2560px) {
+@media (min-width: 1024px) and (max-width: 1440px) {
 }
 
-/* ========== MOBILE ================ */
-@media (max-width: 425px) {
-  .about-container {
-    width: 320px;
-    font-size: 10px;
-    padding: 0;
-    line-height: 18px;
-    height: 400px;
-    margin: 10px auto;
-  }
-}
+

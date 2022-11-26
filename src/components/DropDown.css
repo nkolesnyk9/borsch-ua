@@ -9,10 +9,11 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: #CCD5AE;
+  color: #FEFAE0;
+  background-color: #D4A373;
   font-family: 'Montserrat', sans-serif;
   font-size: 18px;
-  color: #FEFAE0;
+  
   padding: 8px;
   border: none;
   border-radius: 3px;
@@ -40,7 +41,7 @@
   }
   
   .menu > li:hover {
-    background-color: #E9EDC9;
+    background-color: #FAEDCD;
   }
 
   .drop-links{
