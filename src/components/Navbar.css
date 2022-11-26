@@ -52,14 +52,17 @@
 }
 /* ========== MOBILE ================ */
 @media (max-width: 425px) {
-    .links{
-        display: none;
+    .navbar {
+        height: 50px;
+        font-size: 15px;
     }
 
-    .navbar{
-        
-        justify-content: flex-end;
-        
+    .cart{
+        height: 25px;
+        width: 70px;
+        font-size: 15px;
+     
+        padding: 5px;
        
     }
 }

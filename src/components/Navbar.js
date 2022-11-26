@@ -4,22 +4,14 @@ import {useState, useContext} from 'react'
 import Modal from "./Modal";
 import {MdShoppingCart} from 'react-icons/md'
 import {ShopContext} from '../context/CartContext'
-import Sidebar from "./Sidebar";
 
 
-function Navbar() {
-    // const [show, setShow] = useState(false)
-    // const handleClose = () => setShow(false)
-    // const handleShow = () => setShow(true)
-    
+function Navbar() { 
     const [isOpen, setIsOpen] = useState(false);
-    
-   
 
     return (
         <>
-        <div>
-        <Sidebar  />
+        
         <div className="navbar" >
         <Link className="links" to="/">Home Page </Link>
         <Link className="links" to="/about">About </Link>  
@@ -28,7 +20,7 @@ function Navbar() {
         </button>
         </div>
         {isOpen && <Modal setIsOpen={setIsOpen} />}
-        </div>
+     
         </>
     )
 

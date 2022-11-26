@@ -23,7 +23,7 @@ const Accessesories = () => {
   return (
     <>
       <div className="store-nav">
-      <h2>Here are the Accessesories</h2>
+      <h2>Accessesories</h2>
       <DropMenu />
       </div>
       <div className="display-items">
