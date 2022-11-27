@@ -31,21 +31,24 @@
     background-color: #FEFAE0;
     border-radius: 3px;
     z-index: 1000;
+    
   }
   
   .menu > li {
     margin: 0;
-    background-color: #FEFAE0;
     padding: 5px;
-    color: #CCD5AE;
+    color: #D4A373;
   }
   
   .menu > li:hover {
-    background-color: #FAEDCD;
+    background-color: #FEFAE0;
   }
 
   .drop-links{
-    color: #D4A373
+    color: #7f5539
+  }
+  .drop-links:hover{
+    
   }
 
   

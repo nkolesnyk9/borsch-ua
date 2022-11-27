@@ -6,15 +6,14 @@
 .card {
   display: flex;
   flex-direction: row;
-  gap: 15px;
-  /* border: 2px solid black; */
+  gap: 20px;
   padding: 10px;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
     rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   width: 900px;
-  height: 400px;
+  height: 500px;
   border-radius: 5px;
   margin-left: 20px;
   margin-right: 10px;
@@ -22,20 +21,29 @@
   margin-top: 15px;
 }
 
+.card-image {
+}
 .card-image img {
   height: 380px;
   object-fit: cover;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 .card-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
   justify-content: flex-start;
-  height: 380px;
+  height: 500px;
 }
 
+.card-text p {
+  font-size: 18px;
+  line-height: 25px;
+}
 .card-text h3 {
   margin-top: 0;
+  font-size: 25px;  
 }
 
 .card-button {
@@ -46,6 +54,10 @@
   height: 35px;
   border-radius: 3px;
   border: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .card-button:hover {
@@ -56,13 +68,14 @@
 /* ========== MOBILE ================ */
 @media (min-width: 320px) and (max-width: 425px) {
   .card {
-    width: 310px;
-    height: 350px;
+    width: 300px;
+    height: 250px;
     border-radius: 5px;
-    margin-left: 20px;
-    margin-left: 5px;
+    margin-left: 10px;
+    margin-right: 5px;
     align-items: flex-start;
     margin-bottom: 10px;
+    gap: 8px;
   }
 
   .card-image img {
@@ -70,55 +83,81 @@
     object-fit: cover;
     width: 100px;
   }
-  .card-text p {
-    font-size: 8px;
-    height: 100px;
+
+  .card-text {
+    height: 250px;
     width: 200px;
   }
 
+  .card-text p {
+    font-size: 8px;
+    line-height: 12px;
+  }
   .card-text h3 {
     margin-top: 0;
-    font-size: 12px;
+    font-size: 15px;
   }
 
   .card-text h4 {
     margin-top: 0;
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .card-button {
-    width: 100px;
+    width: 90px;
     height: 25px;
-    /* font-size: 12px; */
+    font-size: 12px;
   }
 }
 
 /* ============== TABLET  768px ================= */
 @media (min-width: 426px) and (max-width: 768px) {
   .card {
-    width: 420px;
+    width: 600px;
     height: 300px;
     border-radius: 5px;
-    margin-left: 20px;
-    color: #7f5539;
-    margin-left: 5px;
+    margin-left: 10px;
+    margin-right: 5px;
     align-items: flex-start;
     margin-bottom: 10px;
+    gap: 18px;
   }
 
   .card-image img {
-    height: 200px;
+    height: 250px;
     object-fit: cover;
-  }
-  .card-text {
-    font-size: 10px;
-    height: 100px;
+    width: auto;
   }
 
+  .card-text {
+    height: 300px;
+    width: 400px;
+  }
+
+  .card-text p {
+    font-size: 15px;
+    line-height: 18px;
+  }
   .card-text h3 {
     margin-top: 0;
+    font-size: 18px;
+  }
+
+  .card-text h4 {
+    margin-top: 0;
+    font-size: 16px;
+  }
+
+  .card-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 90px;
+    height: 25px;
+    font-size: 12px;
   }
 }
+
 /* ======== LAPTOP 1024px ======== */
 @media (min-width: 769px) and (max-width: 1024px) {
   .card {
@@ -136,10 +175,7 @@
     height: 300px;
     object-fit: cover;
   }
-  .card-text {
-    font-size: 18px;
-    height: 200px;
-  }
+
   .card-button {
     font-weight: bold;
     width: 120px;
@@ -152,4 +188,7 @@
 
 /* ======== EXTRA LARGE SCREEN ======== */
 @media (min-width: 1024px) and (max-width: 1440px) {
+  .card {
+    gap: 20px;
+  }
 }

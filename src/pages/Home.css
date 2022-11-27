@@ -14,10 +14,10 @@
 }
 .header h1 {
   font-size: 7rem;
-  background: rgba(254, 250, 224, 0.8);
+  background: rgba(254, 250, 224, 0.811);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: fadeInAnimation ease-in 3s;
+  animation: fadeInAnimation ease-in 2s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }

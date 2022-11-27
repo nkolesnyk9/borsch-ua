@@ -6,7 +6,7 @@ AOS.init();
 const Subscribe = () => {
     return (
         <div className="subscribe" data-aos="fade-right" data-aos-easing="linear"
-        data-aos-duration="1500" >
+        data-aos-duration="950" >
             <h2> Want to receive emails about new products?</h2>
             <button>Subscribe</button>
         </div>

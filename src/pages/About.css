@@ -48,7 +48,7 @@
     width: 310px;
     line-height: 18px;
     padding: 15px 5px;
-    margin: 10px auto;
+    margin: 50px auto;
     margin-bottom: 10px;
   }
   .about-container p{
@@ -66,9 +66,8 @@
     height: 400px;
     width: 700px;
     line-height: 25px;
-    padding: 0 5px;
-
-    margin: 10px auto;
+    padding: 20px 5px;
+    margin: 90px auto;
     margin-bottom: 10px;
   }
   .about-container p{
@@ -86,6 +85,14 @@
 
 /* ======== EXTRA LARGE SCREEN ======== */
 @media (min-width: 1024px) and (max-width: 1440px) {
+  .about-container {
+    margin: 120px auto;
+  }
+
+  .about-parent {
+    padding-top: 100px;
+    
+  }
 }
 
 
