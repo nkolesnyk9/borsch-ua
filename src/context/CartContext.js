@@ -17,6 +17,7 @@ class CartProvider extends Component {
 
   componentDidMount() {
     console.log("compenent did Mount");
+    //saving checkout to a localStorage
     if (localStorage.checkout_id) {
       this.fetchCheckout(localStorage.checkout_id);
     } else {
@@ -25,7 +26,7 @@ class CartProvider extends Component {
   }
 
   createCheckout = async () => {
-    // set to wait for a Promise and get its fulfillment value
+    // await is set to wait for a Promise and get its fulfillment value
     const checkout = await client.checkout.create();
     console.log("this is checkout", checkout.id);
     // localStorage - comes with javascript
