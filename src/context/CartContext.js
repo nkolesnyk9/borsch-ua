@@ -61,7 +61,7 @@ class CartProvider extends Component {
     this.setState({ checkout: checkout });
   };
 
-
+  
   removeLineItem = async (lineItemIdsToRemove) => {
     const checkout = await client.checkout.removeLineItems(
       this.state.checkout.id,
